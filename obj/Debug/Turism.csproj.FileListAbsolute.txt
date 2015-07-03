@@ -1,0 +1,10 @@
+C:\Users\stefan.brebenel\Documents\Visual Studio 2013\Projects\Turism\bin\Debug\Turism.exe.config
+C:\Users\stefan.brebenel\Documents\Visual Studio 2013\Projects\Turism\bin\Debug\Turism.exe
+C:\Users\stefan.brebenel\Documents\Visual Studio 2013\Projects\Turism\bin\Debug\Turism.pdb
+C:\Users\stefan.brebenel\Documents\Visual Studio 2013\Projects\Turism\bin\Debug\EntityFramework.dll
+C:\Users\stefan.brebenel\Documents\Visual Studio 2013\Projects\Turism\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\stefan.brebenel\Documents\Visual Studio 2013\Projects\Turism\bin\Debug\EntityFramework.xml
+C:\Users\stefan.brebenel\Documents\Visual Studio 2013\Projects\Turism\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\stefan.brebenel\Documents\Visual Studio 2013\Projects\Turism\obj\Debug\Turism.csprojResolveAssemblyReference.cache
+C:\Users\stefan.brebenel\Documents\Visual Studio 2013\Projects\Turism\obj\Debug\Turism.exe
+C:\Users\stefan.brebenel\Documents\Visual Studio 2013\Projects\Turism\obj\Debug\Turism.pdb

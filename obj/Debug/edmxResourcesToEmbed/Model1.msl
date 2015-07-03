@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TurismBDModelStoreContainer" CdmEntityContainer="TurismBD">
+    <EntitySetMapping Name="AtractieTuristicas">
+      <EntityTypeMapping TypeName="TurismBDModel.AtractieTuristica">
+        <MappingFragment StoreEntitySet="AtractieTuristica">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Denumire" ColumnName="Denumire" />
+          <ScalarProperty Name="Descriere" ColumnName="Descriere" />
+          <ScalarProperty Name="WebSite" ColumnName="WebSite" />
+          <ScalarProperty Name="Adresa" ColumnName="Adresa" />
+          <ScalarProperty Name="Longitudine" ColumnName="Longitudine" />
+          <ScalarProperty Name="Latitudine" ColumnName="Latitudine" />
+          <ScalarProperty Name="IdOras" ColumnName="IdOras" />
+          <ScalarProperty Name="Orar" ColumnName="Orar" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cameras">
+      <EntityTypeMapping TypeName="TurismBDModel.Camera">
+        <MappingFragment StoreEntitySet="Camera">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IdHotel" ColumnName="IdHotel" />
+          <ScalarProperty Name="NrPaturi" ColumnName="NrPaturi" />
+          <ScalarProperty Name="TipPat" ColumnName="TipPat" />
+          <ScalarProperty Name="Pret" ColumnName="Pret" />
+          <ScalarProperty Name="Detalii" ColumnName="Detalii" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Clients">
+      <EntityTypeMapping TypeName="TurismBDModel.Client">
+        <MappingFragment StoreEntitySet="Client">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Nume" ColumnName="Nume" />
+          <ScalarProperty Name="Prenume" ColumnName="Prenume" />
+          <ScalarProperty Name="CNP" ColumnName="CNP" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="DataInceputCazare" ColumnName="DataInceputCazare" />
+          <ScalarProperty Name="DataSfarsitCazare" ColumnName="DataSfarsitCazare" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Comandas">
+      <EntityTypeMapping TypeName="TurismBDModel.Comanda">
+        <MappingFragment StoreEntitySet="Comanda">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IdOferta" ColumnName="IdOferta" />
+          <ScalarProperty Name="IdClient" ColumnName="IdClient" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Comentarius">
+      <EntityTypeMapping TypeName="TurismBDModel.Comentariu">
+        <MappingFragment StoreEntitySet="Comentariu">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="DataComentariu" ColumnName="DataComentariu" />
+          <ScalarProperty Name="IdAtractie" ColumnName="IdAtractie" />
+          <ScalarProperty Name="IdHotel" ColumnName="IdHotel" />
+          <ScalarProperty Name="Detalii" ColumnName="Detalii" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Hotels">
+      <EntityTypeMapping TypeName="TurismBDModel.Hotel">
+        <MappingFragment StoreEntitySet="Hotel">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IdOras" ColumnName="IdOras" />
+          <ScalarProperty Name="Denumire" ColumnName="Denumire" />
+          <ScalarProperty Name="Longitudine" ColumnName="Longitudine" />
+          <ScalarProperty Name="Latitudine" ColumnName="Latitudine" />
+          <ScalarProperty Name="NrCamere" ColumnName="NrCamere" />
+          <ScalarProperty Name="PermisiuneAnimale" ColumnName="PermisiuneAnimale" />
+          <ScalarProperty Name="TipCazare" ColumnName="TipCazare" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Itinerarius">
+      <EntityTypeMapping TypeName="TurismBDModel.Itinerariu">
+        <MappingFragment StoreEntitySet="Itinerariu">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Descriere" ColumnName="Descriere" />
+          <ScalarProperty Name="Orar" ColumnName="Orar" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Logs">
+      <EntityTypeMapping TypeName="TurismBDModel.Log">
+        <MappingFragment StoreEntitySet="Log">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IdUser" ColumnName="IdUser" />
+          <ScalarProperty Name="DataActiune" ColumnName="DataActiune" />
+          <ScalarProperty Name="Actiune" ColumnName="Actiune" />
+          <ScalarProperty Name="StareActiune" ColumnName="StareActiune" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OfertaSejurs">
+      <EntityTypeMapping TypeName="TurismBDModel.OfertaSejur">
+        <MappingFragment StoreEntitySet="OfertaSejur">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IdTara" ColumnName="IdTara" />
+          <ScalarProperty Name="NrPersoane" ColumnName="NrPersoane" />
+          <ScalarProperty Name="IdHotel" ColumnName="IdHotel" />
+          <ScalarProperty Name="DataInceput" ColumnName="DataInceput" />
+          <ScalarProperty Name="DataSfarsit" ColumnName="DataSfarsit" />
+          <ScalarProperty Name="Pret" ColumnName="Pret" />
+          <ScalarProperty Name="AllInclusive" ColumnName="AllInclusive" />
+          <ScalarProperty Name="InCurs" ColumnName="InCurs" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Oras">
+      <EntityTypeMapping TypeName="TurismBDModel.Ora">
+        <MappingFragment StoreEntitySet="Oras">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Denumire" ColumnName="Denumire" />
+          <ScalarProperty Name="IdTara" ColumnName="IdTara" />
+          <ScalarProperty Name="EsteCapitala" ColumnName="EsteCapitala" />
+          <ScalarProperty Name="Latitudine" ColumnName="Latitudine" />
+          <ScalarProperty Name="Longitudine" ColumnName="Longitudine" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="TurismBDModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Taras">
+      <EntityTypeMapping TypeName="TurismBDModel.Tara">
+        <MappingFragment StoreEntitySet="Tara">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Nume" ColumnName="Nume" />
+          <ScalarProperty Name="Continent" ColumnName="Continent" />
+          <ScalarProperty Name="Capitala" ColumnName="Capitala" />
+          <ScalarProperty Name="Populatie" ColumnName="Populatie" />
+          <ScalarProperty Name="LimbaVorbita" ColumnName="LimbaVorbita" />
+          <ScalarProperty Name="Detaliu" ColumnName="Detaliu" />
+          <ScalarProperty Name="Latitudine" ColumnName="Latitudine" />
+          <ScalarProperty Name="Longitudine" ColumnName="Longitudine" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="TurismBDModel.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Nume" ColumnName="Nume" />
+          <ScalarProperty Name="Prenume" ColumnName="Prenume" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="NumeUtilizator" ColumnName="NumeUtilizator" />
+          <ScalarProperty Name="Parola" ColumnName="Parola" />
+          <ScalarProperty Name="TipUtilizator" ColumnName="TipUtilizator" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

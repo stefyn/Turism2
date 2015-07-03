@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="c5a2cd75855e4123a0410243b50c8da4" Name="Diagram1">
+        <EntityTypeShape EntityType="TurismBDModel.AtractieTuristica" Width="1.5" PointX="5.25" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TurismBDModel.Camera" Width="1.5" PointX="7.5" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TurismBDModel.Client" Width="1.5" PointX="3" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TurismBDModel.Comanda" Width="1.5" PointX="5.25" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TurismBDModel.Comentariu" Width="1.5" PointX="7.5" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TurismBDModel.Hotel" Width="1.5" PointX="5.25" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="TurismBDModel.Itinerariu" Width="1.5" PointX="9.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TurismBDModel.Log" Width="1.5" PointX="10" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="TurismBDModel.OfertaSejur" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="TurismBDModel.Ora" Width="1.5" PointX="3" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="TurismBDModel.sysdiagram" Width="1.5" PointX="9.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TurismBDModel.Tara" Width="1.5" PointX="0.75" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="TurismBDModel.User" Width="1.5" PointX="7.75" PointY="1" IsExpanded="true" />
+        <AssociationConnector Association="TurismBDModel.FK_AtractieTuristica_Oras" ManuallyRouted="false" />
+        <AssociationConnector Association="TurismBDModel.FK_Comentariu_AtractieTuristica" ManuallyRouted="false" />
+        <AssociationConnector Association="TurismBDModel.FK_Camera_Hotel" ManuallyRouted="false" />
+        <AssociationConnector Association="TurismBDModel.FK_Comanda_Client" ManuallyRouted="false" />
+        <AssociationConnector Association="TurismBDModel.FK_Comanda_OfertaSejur" ManuallyRouted="false" />
+        <AssociationConnector Association="TurismBDModel.FK_Comentariu_Hotel" ManuallyRouted="false" />
+        <AssociationConnector Association="TurismBDModel.FK_Log_User" ManuallyRouted="false" />
+        <AssociationConnector Association="TurismBDModel.FK_OfertaSejur_Tara" ManuallyRouted="false" />
+        <AssociationConnector Association="TurismBDModel.FK_Oras_Tara" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

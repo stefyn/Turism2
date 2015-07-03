@@ -1,0 +1,309 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TurismBDModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="AtractieTuristica">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="Denumire" Type="varchar" MaxLength="50" />
+    <Property Name="Descriere" Type="varchar" MaxLength="50" />
+    <Property Name="WebSite" Type="varchar" MaxLength="50" />
+    <Property Name="Adresa" Type="varchar" MaxLength="50" />
+    <Property Name="Longitudine" Type="float" />
+    <Property Name="Latitudine" Type="float" />
+    <Property Name="IdOras" Type="int" />
+    <Property Name="Orar" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Camera">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="IdHotel" Type="int" />
+    <Property Name="NrPaturi" Type="int" />
+    <Property Name="TipPat" Type="varchar" MaxLength="50" />
+    <Property Name="Pret" Type="float" />
+    <Property Name="Detalii" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Client">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="Nume" Type="varchar" MaxLength="50" />
+    <Property Name="Prenume" Type="varchar" MaxLength="50" />
+    <Property Name="CNP" Type="varchar" MaxLength="13" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="DataInceputCazare" Type="datetime" />
+    <Property Name="DataSfarsitCazare" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Comanda">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="IdOferta" Type="int" />
+    <Property Name="IdClient" Type="int" />
+  </EntityType>
+  <EntityType Name="Comentariu">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="DataComentariu" Type="datetime" />
+    <Property Name="IdAtractie" Type="int" />
+    <Property Name="IdHotel" Type="int" />
+    <Property Name="Detalii" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Hotel">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="IdOras" Type="int" />
+    <Property Name="Denumire" Type="varchar" MaxLength="50" />
+    <Property Name="Longitudine" Type="float" />
+    <Property Name="Latitudine" Type="float" />
+    <Property Name="NrCamere" Type="int" />
+    <Property Name="PermisiuneAnimale" Type="bit" />
+    <Property Name="TipCazare" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Itinerariu">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="Descriere" Type="varchar" MaxLength="50" />
+    <Property Name="Orar" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Log">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="IdUser" Type="int" />
+    <Property Name="DataActiune" Type="datetime" />
+    <Property Name="Actiune" Type="varchar" MaxLength="50" />
+    <Property Name="StareActiune" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="OfertaSejur">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="IdTara" Type="int" />
+    <Property Name="NrPersoane" Type="int" />
+    <Property Name="IdHotel" Type="int" />
+    <Property Name="DataInceput" Type="datetime" />
+    <Property Name="DataSfarsit" Type="datetime" />
+    <Property Name="Pret" Type="float" />
+    <Property Name="AllInclusive" Type="bit" />
+    <Property Name="InCurs" Type="bit" />
+  </EntityType>
+  <EntityType Name="Oras">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="Denumire" Type="varchar" MaxLength="50" />
+    <Property Name="IdTara" Type="int" />
+    <Property Name="EsteCapitala" Type="bit" />
+    <Property Name="Latitudine" Type="float" />
+    <Property Name="Longitudine" Type="float" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="Tara">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="Nume" Type="varchar" MaxLength="50" />
+    <Property Name="Continent" Type="varchar" MaxLength="50" />
+    <Property Name="Capitala" Type="varchar" MaxLength="50" />
+    <Property Name="Populatie" Type="varchar" MaxLength="50" />
+    <Property Name="LimbaVorbita" Type="varchar" MaxLength="50" />
+    <Property Name="Detaliu" Type="varchar" MaxLength="50" />
+    <Property Name="Latitudine" Type="float" />
+    <Property Name="Longitudine" Type="float" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="Nume" Type="varchar" MaxLength="50" />
+    <Property Name="Prenume" Type="varchar" MaxLength="50" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="NumeUtilizator" Type="varchar" MaxLength="50" />
+    <Property Name="Parola" Type="varchar" MaxLength="50" />
+    <Property Name="TipUtilizator" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_AtractieTuristica_Oras">
+    <End Role="Oras" Type="Self.Oras" Multiplicity="0..1" />
+    <End Role="AtractieTuristica" Type="Self.AtractieTuristica" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Oras">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="AtractieTuristica">
+        <PropertyRef Name="IdOras" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Camera_Hotel">
+    <End Role="Hotel" Type="Self.Hotel" Multiplicity="0..1" />
+    <End Role="Camera" Type="Self.Camera" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Hotel">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Camera">
+        <PropertyRef Name="IdHotel" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Comanda_Client">
+    <End Role="Client" Type="Self.Client" Multiplicity="0..1" />
+    <End Role="Comanda" Type="Self.Comanda" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Client">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Comanda">
+        <PropertyRef Name="IdClient" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Comanda_OfertaSejur">
+    <End Role="OfertaSejur" Type="Self.OfertaSejur" Multiplicity="0..1" />
+    <End Role="Comanda" Type="Self.Comanda" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OfertaSejur">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Comanda">
+        <PropertyRef Name="IdOferta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Comentariu_AtractieTuristica">
+    <End Role="AtractieTuristica" Type="Self.AtractieTuristica" Multiplicity="0..1" />
+    <End Role="Comentariu" Type="Self.Comentariu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AtractieTuristica">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Comentariu">
+        <PropertyRef Name="IdAtractie" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Comentariu_Hotel">
+    <End Role="Hotel" Type="Self.Hotel" Multiplicity="0..1" />
+    <End Role="Comentariu" Type="Self.Comentariu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Hotel">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Comentariu">
+        <PropertyRef Name="IdHotel" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Log_User">
+    <End Role="User" Type="Self.User" Multiplicity="0..1" />
+    <End Role="Log" Type="Self.Log" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Log">
+        <PropertyRef Name="IdUser" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OfertaSejur_Tara">
+    <End Role="Tara" Type="Self.Tara" Multiplicity="0..1" />
+    <End Role="OfertaSejur" Type="Self.OfertaSejur" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tara">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="OfertaSejur">
+        <PropertyRef Name="IdTara" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Oras_Tara">
+    <End Role="Tara" Type="Self.Tara" Multiplicity="0..1" />
+    <End Role="Oras" Type="Self.Oras" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tara">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Oras">
+        <PropertyRef Name="IdTara" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="TurismBDModelStoreContainer">
+    <EntitySet Name="AtractieTuristica" EntityType="Self.AtractieTuristica" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Camera" EntityType="Self.Camera" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Client" EntityType="Self.Client" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Comanda" EntityType="Self.Comanda" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Comentariu" EntityType="Self.Comentariu" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Hotel" EntityType="Self.Hotel" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Itinerariu" EntityType="Self.Itinerariu" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Log" EntityType="Self.Log" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OfertaSejur" EntityType="Self.OfertaSejur" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Oras" EntityType="Self.Oras" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tara" EntityType="Self.Tara" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_AtractieTuristica_Oras" Association="Self.FK_AtractieTuristica_Oras">
+      <End Role="Oras" EntitySet="Oras" />
+      <End Role="AtractieTuristica" EntitySet="AtractieTuristica" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Camera_Hotel" Association="Self.FK_Camera_Hotel">
+      <End Role="Hotel" EntitySet="Hotel" />
+      <End Role="Camera" EntitySet="Camera" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Comanda_Client" Association="Self.FK_Comanda_Client">
+      <End Role="Client" EntitySet="Client" />
+      <End Role="Comanda" EntitySet="Comanda" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Comanda_OfertaSejur" Association="Self.FK_Comanda_OfertaSejur">
+      <End Role="OfertaSejur" EntitySet="OfertaSejur" />
+      <End Role="Comanda" EntitySet="Comanda" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Comentariu_AtractieTuristica" Association="Self.FK_Comentariu_AtractieTuristica">
+      <End Role="AtractieTuristica" EntitySet="AtractieTuristica" />
+      <End Role="Comentariu" EntitySet="Comentariu" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Comentariu_Hotel" Association="Self.FK_Comentariu_Hotel">
+      <End Role="Hotel" EntitySet="Hotel" />
+      <End Role="Comentariu" EntitySet="Comentariu" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Log_User" Association="Self.FK_Log_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="Log" EntitySet="Log" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OfertaSejur_Tara" Association="Self.FK_OfertaSejur_Tara">
+      <End Role="Tara" EntitySet="Tara" />
+      <End Role="OfertaSejur" EntitySet="OfertaSejur" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Oras_Tara" Association="Self.FK_Oras_Tara">
+      <End Role="Tara" EntitySet="Tara" />
+      <End Role="Oras" EntitySet="Oras" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
